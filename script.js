@@ -28,9 +28,7 @@ function generateRows(iterations) {
     var divHoursEl = $("<div>").addClass("col-2 hour");
     var timeHoursBlock = divHoursEl.append(spanHoursEl);
 
-    var textAreasEl = $("<textarea>")
-      .addClass("col-9 description")
-      .attr("id", timeBlockText);
+    var textAreasEl = $("<textarea>").addClass("col-9 description");
 
     var saveButtonsEl = $("<button>").addClass("col-1 saveBtn");
 
@@ -40,30 +38,34 @@ function generateRows(iterations) {
     sectionRowsEl.append(timeHoursBlock, textAreasEl, saveButton);
     divContainerEl.append(sectionRowsEl);
 
-    var currentHour = moment();
-    if (businessHours.isBefore(currentHour.minute(0))) {
-      // set class for before
-      textAreasEl.addClass("past");
-    } else if (businessHours.isSame(currentHour.minute(0))) {
-      // set some color
-      textAreasEl.addClass("present");
-    } else {
-      // set color for after
-      textAreasEl.addClass("future");
+    var storedText = localStorage.getItem(timeBlockText);
+    if (storedText) {
+      textAreasEl.val(storedText);
     }
 
+    // Grabbed the button tags' siblings, textarea, and checks for values inside
     saveButtonsEl.on("click", setToDos);
-    console.log(saveButtonsEl);
-
-    function setToDos() {
-      var textAreasToDo = textAreasEl.value;
-      if (textAreasToDo === undefined) {
+    function setToDos(event) {
+      var textAreasToDo = $(this).siblings("textarea").val().trim();
+      var timeText = $(this).siblings("div.hour")[0].textContent;
+      if (textAreasToDo === "") {
         alert("Nothing to save");
       } else {
+        alert("Saved");
+
+        localStorage.setItem(timeText, textAreasToDo);
       }
+    }
+    // Set classes for past, present and future by comparing the incremented businessHours to currentHour using Moment JS
+    var currentHour = moment().minute(0).second(0);
+    if (businessHours.isBefore(currentHour.minute(0))) {
+      textAreasEl.addClass("past");
+    } else if (businessHours.format("LT") === currentHour.format("LT")) {
+      textAreasEl.addClass("present");
+    } else {
+      textAreasEl.addClass("future");
     }
   }
 }
 
 generateRows(9);
-// Added classes to textAreasEl to change color signifying past, present or future
