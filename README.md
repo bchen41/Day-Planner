@@ -18,7 +18,7 @@ Clicking the save button will make it so that the descriptions persist even afte
 
 ## **Screenshot**
 
-<img src="work-day-planner.png" alt="Screenshot of Work Day Planner"/>
+<img src="dayplanner.png" alt="Screenshot of Work Day Planner"/>
 
 ## **Github Page Link**
 
