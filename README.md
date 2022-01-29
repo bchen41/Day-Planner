@@ -6,6 +6,10 @@
 
 A day planner where users can keep track of important events during their busy work schedule so that they can manage their time effectively. They are able to save events so that the information will not be lost upon refreshing so they can re-visit their day planner.
 
+## Usage
+
+After cloning the repository, if you would like to open the application locally, you need to either open the index.html file and press the short cut "Alt+B" or left click over the file and click "Open in Default Browser" to view this application.
+
 **HTML and CSS**
 
 The focus of this project was to mainly use JQuery, Bootstrap and Moment JS to dynamically update the HTML and CSS.
