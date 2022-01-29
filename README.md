@@ -1,8 +1,10 @@
 # Work Day Planner
 
+![badge](https://img.shields.io/badge/license-MIT-blue)
+
 ## **Description**
 
-Making a day planner where users can store important events into their busy work schedule so that they can manage their time effectively.
+A day planner where users can keep track of important events during their busy work schedule so that they can manage their time effectively. They are able to save events so that the information will not be lost upon refreshing so they can re-visit their day planner.
 
 **HTML and CSS**
 
@@ -18,10 +20,14 @@ Clicking the save button will make it so that the descriptions persist even afte
 
 ## **Screenshot**
 
-<img src="dayplanner.png" alt="Screenshot of Work Day Planner"/>
+<img src="./Assets/img/dayplanner.png" alt="Screenshot of Work Day Planner"/>
 
-## **Github Page Link**
+## **Github Page**
 
-[Link to Github Page!](https://bchen41.github.io/Day-Planner/)
+[Github Page](https://bchen41.github.io/Day-Planner/)
+
+## License
+
+[MIT License](https://github.com/bchen41/Day-Planner/blob/main/LICENSE)
 
 Author: Betty Chen
