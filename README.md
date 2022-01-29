@@ -4,23 +4,13 @@
 
 ## **Description**
 
-A day planner where users can keep track of important events during their busy work schedule so that they can manage their time effectively. They are able to save events so that the information will not be lost upon refreshing so they can re-visit their day planner.
+The focus of this project was to mainly use JQuery, Bootstrap and Moment JS to dynamically update the HTML and CSS.
+
+A day planner where users can keep track of important events during their busy work schedule so that they can manage their time effectively. The text area rows change colors corresponding to whether the timeblocks are in the past, present or future. They are able to save or unsave their texts from the local storage. This makes it possible for the information to persist so that users are able to re-visit their day planner without worrying about losing their information.
 
 ## Usage
 
 After cloning the repository, if you would like to open the application locally, you need to either open the index.html file and press the short cut "Alt+B" or left click over the file and click "Open in Default Browser" to view this application.
-
-**HTML and CSS**
-
-The focus of this project was to mainly use JQuery, Bootstrap and Moment JS to dynamically update the HTML and CSS.
-
-**JavaScript**
-
-This work day planner will present the current day and time with rows and columns. There are columns indicating timeblocks in standard business hours, text areas to input descriptions and a button to save or unsave the descriptions from the local storage.
-
-Text area columns changes color corresponding to whether the timeblocks are in the past, present or future.
-
-Clicking the save button will make it so that the descriptions persist even after refreshing the page.
 
 ## **Screenshot**
 
